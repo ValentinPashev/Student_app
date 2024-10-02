@@ -1,7 +1,13 @@
-from django.urls import path
+from django.urls import path, include
 
 from Student_project_AMMB.events import views
 
 urlpatterns = [
-    path('event/', views.events, name='events'),
+    path('add/', views.add_event_page, name='events'),
+    path('<str:name_of_event>/events/', include([
+        path('', views.event_details_page, name='events'),
+        path('edit/', views.edit_event_page, name='edit_event_page'),
+        path('delete/', views.delete_event_page, name='delete_event_page'),
+
+    ]) ),
 ]
