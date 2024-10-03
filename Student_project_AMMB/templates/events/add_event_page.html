@@ -87,29 +87,37 @@
         </div>
 
         <h2>Добавяне на събитие</h2>
-        <form action="#" method="post">
+        
+{#        <form action="/" method="post">#}
+{#             {% csrf_token %}#}
+{#            {{ add_event_page }}#}
             <!-- Event Name -->
-            <label for="event_name">Име на събитието:</label>
-            <input type="text" id="event_name" name="event_name" placeholder="Въведете името на събитието" required>
-
-            <!-- Event Description -->
-            <label for="event_description">Описание:</label>
-            <textarea id="event_description" name="event_description" placeholder="Въведете кратоко описание на събитието" required></textarea>
-
-            <!-- Event Date -->
-            <label for="event_date">Дата:</label>
-            <input type="date" id="event_date" name="event_date" required>
-
-            <!-- Event Location -->
-            <label for="event_location">Локация:</label>
-            <input type="text" id="event_location" name="event_location" placeholder="Въведете мястото на което ще се проведе събитието" required>
-
-            <!-- Event Organizer -->
-            <label for="event_organizer">Организатори:</label>
-            <input type="text" id="event_organizer" name="event_organizer" placeholder="Две имена на организатори" required>
-
-            <!-- Submit Button -->
-            <button type="submit" class="submit-btn">Submit Event</button>
+        <form action="{% url 'events' %}" method="post">
+            {{ form }}
+            {% csrf_token %}
+            <button>Submit</button>
+        </form>
+{#            <label for="event_name">Име на събитието:</label>#}
+{#            <input type="text" id="event_name" name="event_name" placeholder="Въведете името на събитието" required>#}
+{##}
+{#            <!-- Event Description -->#}
+{#            <label for="event_description">Описание:</label>#}
+{#            <textarea id="event_description" name="event_description" placeholder="Въведете кратко описание на събитието" required></textarea>#}
+{##}
+{#            <!-- Event Date -->#}
+{#            <label for="event_date">Дата:</label>#}
+{#            <input type="date" id="event_date" name="event_date" required>#}
+{##}
+{#            <!-- Event Location -->#}
+{#            <label for="event_location">Локация:</label>#}
+{#            <input type="text" id="event_location" name="event_location" placeholder="Въведете мястото на което ще се проведе събитието" required>#}
+{##}
+{#            <!-- Event Organizer -->#}
+{#            <label for="event_organizer">Организатори:</label>#}
+{#            <input type="text" id="event_organizer" name="event_organizer" placeholder="Две имена на организатори" required>#}
+{##}
+{#            <!-- Submit Button -->#}
+{#            <button type="submit" class="submit-btn">Submit Event</button>#}
         </form>
     </div>
 </body>
