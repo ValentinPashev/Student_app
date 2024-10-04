@@ -1,0 +1,30 @@
+/* Apply the background image to the body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url("../images/background.png");
+    background-size: cover;  /* Cover the whole page */
+    background-position: center;  /* Center the image */
+    background-attachment: fixed;  /* Keep the background in place during scrolling */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Styling for the container to make text readable */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);  /* Semi-transparent background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #3498db;
+}
+
+p {
+    color: #2c3e50;
+}
