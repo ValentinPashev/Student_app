@@ -33,6 +33,11 @@ class Student(models.Model):
         editable=False,
     )
 
+    email = models.EmailField(
+        "email address",
+        blank=True)
+
+
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
 

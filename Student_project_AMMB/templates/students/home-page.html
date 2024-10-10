@@ -1,26 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <style>
-        body
-        {
-            background-image: url("/static_files_css/images/background.png");
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-        }
-    </style>
     <title>Student App</title>
     {% load static %}
     <!-- Link to the CSS file -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/home-page.css' %}">
     <link rel="icon" type="image/x-icon" href="{% static 'images/background.png' %}"> 
-    <img width="1080" src="/static_files_css/images/background.png" alt="img1">
-
-    
-    {% include 'common/navbar.html' %}
+    <img width="480px"  src="/static_files_css/images/background.png" alt="img1">
+</div>
 </head>
-
 <body>
     <div class="container">
         <h1>Welcome to the Student App</h1>
@@ -28,6 +16,5 @@
     </div>
 </body>
 </html>
-
 
 
