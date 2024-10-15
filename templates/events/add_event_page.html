@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Event</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #555555;
+            text-align: left;
+        }
+
+        input, textarea, select {
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        textarea {
+            height: 100px;
+            resize: none;
+        }
+
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Logo styling */
+        .logo {
+            margin-bottom: 10px;
+        }
+
+        .logo img {
+            width: 350px;  /* You can adjust the size of the logo */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Add logo here -->
+        <div class="logo">
+            <img src="{% static 'images/Logo.png' %}" alt="Event Logo">
+        </div>
+
+        <h2>Добавяне на събитие</h2>
+        
+{#        <form action="/" method="post">#}
+{#             {% csrf_token %}#}
+{#            {{ add_event_page }}#}
+            <!-- Event Name -->
+        <form action="{% url 'events' %}" method="post">
+            {{ form }}
+            {% csrf_token %}
+            <button>Submit</button>
+        </form>
+{#            <label for="event_name">Име на събитието:</label>#}
+{#            <input type="text" id="event_name" name="event_name" placeholder="Въведете името на събитието" required>#}
+{##}
+{#            <!-- Event Description -->#}
+{#            <label for="event_description">Описание:</label>#}
+{#            <textarea id="event_description" name="event_description" placeholder="Въведете кратко описание на събитието" required></textarea>#}
+{##}
+{#            <!-- Event Date -->#}
+{#            <label for="event_date">Дата:</label>#}
+{#            <input type="date" id="event_date" name="event_date" required>#}
+{##}
+{#            <!-- Event Location -->#}
+{#            <label for="event_location">Локация:</label>#}
+{#            <input type="text" id="event_location" name="event_location" placeholder="Въведете мястото на което ще се проведе събитието" required>#}
+{##}
+{#            <!-- Event Organizer -->#}
+{#            <label for="event_organizer">Организатори:</label>#}
+{#            <input type="text" id="event_organizer" name="event_organizer" placeholder="Две имена на организатори" required>#}
+{##}
+{#            <!-- Submit Button -->#}
+{#            <button type="submit" class="submit-btn">Submit Event</button>#}
+        </form>
+    </div>
+</body>
+</html>
